@@ -1,5 +1,13 @@
 module.exports = function (grunt) {
-    grunt.registerMultiTask('pluckprod', 'Copies .js,.json files to a deploy folder. For any packages under `node_modules`, only production packages are copied.', function () {
+    grunt.registerMultiTask('pluckprod',
+
+            'Copies pattern match files to a deploy folder. '+
+            'For any packages under `node_modules`, matching files'+
+            ' in devDependencies modules are excluded.',
+            
+    function ()
+    {
+
         var files = this.filesSrc; // should already be filtered by target file types.
         
         var target = grunt.config('target') || 'out/';
