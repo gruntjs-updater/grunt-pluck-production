@@ -24,7 +24,7 @@
       "url": "https://github.com/i-e-b/grunt-pluck-production/blob/master/LICENSE"
     }
   ],
-  "devDependencies": {
+  "peerDependencies": {
     "grunt": "~0.4.0"
   },
   "bugs": {

@@ -45,6 +45,7 @@ module.exports = function (grunt) {
         files.forEach(function (value) {
             if (value.indexOf(target) === 0) return; // file is in the old deleted target. Ignore
             if (isExcluded(value)) return;
+            if (grunt.file.isDir(value)) return; // some packages have names like `retroencabulator.js`...
 
             grunt.log.writeln('    ' + value);
             grunt.file.copy(value, target+'/'+value);

@@ -3,7 +3,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pluckprod : {
-            files : ['**/*.js', '**/.json'],
+            // a minimal set of files that should get most non-web projects going
+            files : ['**/*.js', '**/*.json', '**/*.types', '**/*.node'],
+            // alternatively, copy everything not in a dev dependency:
+            // files : ['**/*'],
             options : {
                 target : './out'
             }
