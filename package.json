@@ -1,6 +1,6 @@
 {
   "name": "grunt-pluck-production",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Copy production files to a filesystem location, excluding dev dependencies",
   "main": "Gruntfile.js",
   "scripts": {

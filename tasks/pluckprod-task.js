@@ -9,8 +9,10 @@ module.exports = function (grunt) {
     {
 
         var files = this.filesSrc; // should already be filtered by target file types.
+
+        console.dir(grunt)
         
-        var target = grunt.config('target') || 'out/';
+        var target = grunt.config('pluckprod.options.target') || 'out/';
         if (target.indexOf('./') === 0) target = target.slice(2);
         if (target.slice(-1) !== '/') target += '/';
 
